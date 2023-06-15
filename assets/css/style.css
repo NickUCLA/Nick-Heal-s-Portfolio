@@ -17,8 +17,8 @@ header {
   height: 37px;
   background-color: #026c2cfe;
   border-radius: 50%;
-  left: 13.5px;
-  top: 6.5px;
+  left: 4px;
+  top: 9px;
 }
 
 .github-image {
@@ -46,6 +46,11 @@ nav {
   margin-left: auto;
 }
 
+.pagecontainer {
+  display: flex;
+  gap: 10px;
+}
+
 h2 {
   margin-left: auto;
   padding-left: 30px;
@@ -54,6 +59,7 @@ h2 {
   font-family: monospace;
   text-shadow: 2px 1px 0 black;
   justify-content: flex-end;
+  min-width: 90px;
 }
 
 h2:hover {
@@ -72,16 +78,16 @@ section {
   padding: 20px;
 }
 
-.Projects {
-  flex: 1 0 60%;
+.projects {
+  flex: 1 0 60vw;
 }
 
-.About-me {
-  flex: 1 0 35%;
+.aboutme {
+  flex: 1 0 30vw;
 }
 
 .rock-paper-scissors {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -133,4 +139,16 @@ a:hover::before {
   background-color: rgba(0, 0, 0, 0.3); /* Set the desired background color */
   pointer-events: none;
   z-index: 1;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    background-color: black;
+  }
+  h1 {
+    font-size: 100%;
+  }
+  h2 {
+    font-size: 50%;
+  }
 }
