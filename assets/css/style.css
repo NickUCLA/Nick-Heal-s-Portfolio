@@ -8,7 +8,10 @@ header {
   padding: 1%;
   background-color: #202020;
   color: #fff;
-  max-height: 50px;
+}
+
+.github-image-container {
+  position: relative;
 }
 
 .github-border {
@@ -46,31 +49,64 @@ nav {
   margin-left: auto;
 }
 
-.pagecontainer {
+ul {
   display: flex;
-  gap: 10px;
-}
-
-h2 {
   margin-left: auto;
-  padding-left: 30px;
-  font-size: 70%;
+  font-size: 100%;
   padding-top: 20px;
   font-family: monospace;
   text-shadow: 2px 1px 0 black;
   justify-content: flex-end;
   min-width: 90px;
+  white-space: nowrap;
 }
 
-h2:hover {
+li {
+  padding-left: 30px;
+}
+
+nav ul li {
+  font-size: 20px;
+}
+
+li:hover {
   color: #026c2cfe;
   cursor: pointer;
 }
 
-main {
+.aboutme {
+  flex: 1 0 30vw;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
+}
+
+.leftSide {
+  border-left: 2px solid #026c2cfe;
+  height: 100%;
+  padding-bottom: 10px;
+}
+
+.rightSide {
+  border-right: 2px solid #026c2cfe;
+  height: 100%;
+  padding-bottom: 10px;
+}
+
+h2 {
+  padding: 20px;
+  font-weight: 900;
+  background-color: #202020;
+  color: white;
+  margin-top: 10px;
+  text-shadow: 2px 1px 0 rgb(0, 106, 41);
+  font-family: monospace;
+  font-size: 20px;
+  text-align: center;
+}
+
+.pagecontainer {
+  display: flex;
+  gap: 10px;
 }
 
 section {
@@ -79,20 +115,42 @@ section {
 }
 
 .projects {
-  flex: 1 0 60vw;
+  margin-right: 10vw;
+  display: flex;
+  flex-direction: column;
 }
 
-.aboutme {
-  flex: 1 0 30vw;
+.smallCards {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+aside {
+  margin-left: 10vw;
+}
+
+.profile-picture {
+  max-width: 200px;
+  border-radius: 40%;
+}
+
+.pictureContainer {
+  float: left;
+  margin-right: 15px;
+}
+
+.about-me-p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  text-align: justify;
 }
 
 .rock-paper-scissors {
   max-width: 100%;
   height: auto;
-}
-
-figure {
-  position: relative;
 }
 
 figcaption:hover ~ .description,
@@ -102,6 +160,10 @@ figcaption:hover ~ .description,
 
 figcaption:hover {
   cursor: pointer;
+}
+
+figcaption {
+  padding-top: 10px;
 }
 
 .description {
@@ -119,6 +181,7 @@ figcaption:hover {
 
 figcaption {
   font-weight: bolder;
+  font-style: italic;
   text-decoration: underline;
   color: #026c2cfe;
 }
@@ -141,14 +204,67 @@ a:hover::before {
   z-index: 1;
 }
 
-@media screen and (max-width: 600px) {
-  html {
-    background-color: black;
-  }
+.contact {
+}
+
+footer {
+  background-color: #202020;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  height: 100%;
+  font-family: monospace;
+}
+
+@media screen and (max-width: 900px) {
   h1 {
     font-size: 100%;
   }
-  h2 {
+  ul {
     font-size: 50%;
+  }
+  nav ul li {
+    font-size: 15px;
+  }
+  .flex {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .smallCards {
+    grid-template-columns: auto;
+  }
+  .pagecontainer {
+    flex-direction: column;
+    width: 100%;
+  }
+  .projects {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .project {
+    margin: 0 25px;
+  }
+  .projects h2 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  header {
+    flex-direction: column;
+    height: 100%;
+  }
+  header h1 {
+    text-align: center;
+  }
+  header nav {
+    margin: 0 auto 10px auto;
+    justify-content: center;
+  }
+  header nav ul li {
+    padding: 0 15px;
   }
 }
