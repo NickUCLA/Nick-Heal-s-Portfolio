@@ -34,7 +34,7 @@ header {
 }
 
 h1 {
-  font-size: 180%;
+  font-size: 250%;
   padding: 1px;
   font-style: italic;
   font-family: monospace;
@@ -49,7 +49,7 @@ nav {
   margin-left: auto;
 }
 
-ul {
+nav ul {
   display: flex;
   margin-left: auto;
   font-size: 100%;
@@ -61,15 +61,16 @@ ul {
   white-space: nowrap;
 }
 
-li {
-  padding-left: 30px;
-}
-
 nav ul li {
+  padding-left: 30px;
   font-size: 20px;
 }
 
-li:hover {
+nav a {
+  color: white;
+}
+
+nav a:hover {
   color: #026c2cfe;
   cursor: pointer;
 }
@@ -148,18 +149,34 @@ aside {
   text-align: justify;
 }
 
+.contact {
+  font-family: monospace;
+  font-size: 17px;
+  line-height: 2;
+  font-weight: 700;
+}
+
+.contact a {
+  color: black;
+}
+
+.contact a:hover {
+  color: #026c2cfe;
+}
+
 .rock-paper-scissors {
   max-width: 100%;
   height: auto;
 }
 
-figcaption:hover ~ .description,
-.description:hover {
-  display: block;
+.calculator {
+  max-width: 100%;
+  height: auto;
+  text-align: center;
 }
 
-figcaption:hover {
-  cursor: pointer;
+figure:hover .description {
+  display: block;
 }
 
 figcaption {
@@ -184,6 +201,7 @@ figcaption {
   font-style: italic;
   text-decoration: underline;
   color: #026c2cfe;
+  text-align: center;
 }
 
 a {
@@ -191,8 +209,8 @@ a {
   position: relative;
 }
 
-a:focus::before,
-a:hover::before {
+.project a:focus::before,
+.project a:hover::before {
   content: "";
   position: absolute;
   top: 0;
@@ -204,9 +222,6 @@ a:hover::before {
   z-index: 1;
 }
 
-.contact {
-}
-
 footer {
   background-color: #202020;
   color: white;
@@ -216,12 +231,15 @@ footer {
   font-family: monospace;
 }
 
+@media screen and (max-width: 1000px) {
+  .about-me-p {
+    font-size: 12px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   h1 {
-    font-size: 100%;
-  }
-  ul {
-    font-size: 50%;
+    font-size: 20px;
   }
   nav ul li {
     font-size: 15px;
@@ -232,6 +250,9 @@ footer {
 }
 
 @media screen and (max-width: 720px) {
+  nav ul li {
+    font-size: 12px;
+  }
   .smallCards {
     grid-template-columns: auto;
   }
@@ -245,10 +266,20 @@ footer {
     padding: 0;
   }
   .project {
-    margin: 0 25px;
+    margin: 0 10vw;
   }
   .projects h2 {
     text-align: center;
+    margin: 0 10vw;
+  }
+  .aboutme {
+    margin-right: 10vw;
+  }
+  .leftSide {
+    border: none;
+  }
+  .rightSide {
+    border: none;
   }
 }
 
@@ -266,5 +297,11 @@ footer {
   }
   header nav ul li {
     padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .pictureContainer {
+    float: none;
   }
 }
