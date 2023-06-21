@@ -31,6 +31,7 @@ header {
   border-radius: 50%;
   min-width: 45px;
   max-width: 45px;
+  cursor: pointer;
 }
 
 h1 {
@@ -123,7 +124,7 @@ section {
 
 .smallCards {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
 }
 
 aside {
@@ -167,12 +168,19 @@ aside {
 .rock-paper-scissors {
   max-width: 100%;
   height: auto;
+  border-radius: 70px;
+  border: 3px solid #026c2cfe;
 }
 
 .calculator {
   max-width: 100%;
-  height: auto;
   text-align: center;
+  border-radius: 70px;
+}
+
+.future-project {
+  max-width: 100%;
+  border-radius: 70px;
 }
 
 figure:hover .description {
@@ -217,9 +225,10 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.3); /* Set the desired background color */
+  background-color: rgba(0, 0, 0, 0.3);
   pointer-events: none;
   z-index: 1;
+  border-radius: 70px;
 }
 
 footer {
