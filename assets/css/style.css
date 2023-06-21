@@ -104,6 +104,7 @@ h2 {
   font-family: monospace;
   font-size: 20px;
   text-align: center;
+  margin-bottom: 0;
 }
 
 .pagecontainer {
