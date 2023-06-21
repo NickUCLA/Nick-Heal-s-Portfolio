@@ -2,6 +2,8 @@
 
 This portfolio showcases my work and projects that I have worked on. It serves as a platform to highlight my skills, experience, and accomplishments. Here, you will find a collection of projects that demonstrate my technical abilities and creativity.
 
+![](/assets/images/screenshot.png)<center>https://nickucla.github.io/Nick-Heals-Portfolio/</center>
+
 ## Table of Contents
 
 - [About Me](#about-me)
