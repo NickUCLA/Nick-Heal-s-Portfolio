@@ -65,6 +65,7 @@ nav ul {
 nav ul li {
   padding-left: 30px;
   font-size: 20px;
+  list-style: none;
 }
 
 nav a {
